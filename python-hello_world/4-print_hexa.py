@@ -1,2 +1,2 @@
-for n in range(100):
+for n in range(99):
     print(str(n) + " = " +  hex(n))
