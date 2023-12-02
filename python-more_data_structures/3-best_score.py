@@ -15,8 +15,4 @@ def best_score(a_dictionary):
             if a_dictionary[key] == max_value:
                 return key
         
-    
-my_dict = None
 
-print(best_score(my_dict))
-   
