@@ -1,7 +1,8 @@
 def best_score(a_dictionary):
-    
-    if len(a_dictionary) == 0 or a_dictionary == None:
-        max_value = None
+    if a_dictionary == None:
+        return None
+    if len(a_dictionary) == 0:
+        return None
     
     max_value = 0
 
@@ -14,4 +15,7 @@ def best_score(a_dictionary):
             return key
     
     
+my_dict = None
+
+print(best_score(my_dict))
    
