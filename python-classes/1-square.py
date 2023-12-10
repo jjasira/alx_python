@@ -11,11 +11,12 @@ class Square:
         this is a private instance variable
         """
         self.__size = size
-        if self.__size < 0:
-            raise ValueError("size must be >= 0")
-        """raise a value error exception"""
         if type(self.__size) is not int:
             raise TypeError("size must be an integer")
         
         """raise a type error exception"""
+        if self.__size < 0:
+            raise ValueError("size must be >= 0")
+        """raise a value error exception"""
+        
             
