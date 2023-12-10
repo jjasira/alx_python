@@ -38,8 +38,8 @@ class Square:
     def my_print(self):
         """Printing the square in std form"""
         if self.__size > 0:
-            for i in range(self.__size+1):
-                for j in range(self.__size+1):
-                    print("#")
+            for i in range(self.__size):
+                
+                print("#" * self.__size)
         else:
             print(" ")
