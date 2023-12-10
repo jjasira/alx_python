@@ -1,3 +1,7 @@
+
+"""
+    In this module we will learn about class declarations
+"""
 class Square:
     """
     This is the class declaration
