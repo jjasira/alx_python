@@ -17,9 +17,9 @@ class Square:
         return self.__size ** 2
         """This method calculates the area of the square"""
     
-    def size(self):
-        return self.__size
-        """This method gets the size of the square"""
+    # def size(self):
+    #     return self.__size
+    #     """This method gets the size of the square"""
     
     def size(self, value):
         
@@ -33,3 +33,5 @@ class Square:
         if self.__size < 0:
             raise ValueError("size must be >= 0")
         """raise a value error exception"""
+
+        return self.__size
