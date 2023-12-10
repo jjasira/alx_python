@@ -1,5 +1,6 @@
 """we define our base class"""
-
 class BaseGeometry():
-    """more code will be added later"""
-    pass
+    """This is our base class"""
+    def area(self):
+        """This method raises an exception"""
+        raise Exception("area() is not implemented")
