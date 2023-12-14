@@ -49,3 +49,5 @@ class Square(Rectangle):
     def area(self):
         """we define an area method that overides the superclass"""
         return self.__size ** 2
+    
+
