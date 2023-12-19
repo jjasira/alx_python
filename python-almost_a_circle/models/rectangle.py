@@ -89,8 +89,10 @@ class Rectangle(Base):
     
     def display(self):
         """This method will display the rectangle"""
+        for _ in range(self.y):
+            print()
         for i in range(self.height):
-            print("#" * self.width)
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self) -> str:
         """This method overides the __str__ method and returns this unique string"""
