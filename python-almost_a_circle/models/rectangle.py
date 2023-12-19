@@ -97,3 +97,10 @@ class Rectangle(Base):
     def __str__(self) -> str:
         """This method overides the __str__ method and returns this unique string"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+    
+
+    def update(self, *args):
+        """This method updates the attributes from a provided list of arguments"""
+        attributes = ["id", "width", "height", "x", "y"]
+        for i, value in enumerate(args):
+            setattr(self, attributes[i], value)
