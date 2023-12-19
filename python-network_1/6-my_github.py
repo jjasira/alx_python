@@ -22,6 +22,6 @@ if __name__ == "__main__":
     if response.status_code == 200:
         user_data = response.json()
         user_id = user_data['id']
-        print(f"GitHub User ID: {user_id}")
+        print(f"{user_id}")
     else:
         print(f"Error: {response.status_code} - {response.text}")
