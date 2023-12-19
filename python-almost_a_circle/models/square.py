@@ -1,5 +1,6 @@
+"""we will import the Rectangle class which will be inherited by the square class"""
 from models.rectangle import Rectangle
-
+"""The square class inherits from the Rectangle class"""
 class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """we call the superclass constructor"""
