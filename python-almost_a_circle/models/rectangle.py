@@ -32,6 +32,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.validate_positive(value, "width")
         self.__width = value
 
     """getter and setter for height"""
@@ -41,6 +42,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        self.validate_positive(value, 'height')
         self.__height = value
 
     """getter and setter for x"""
@@ -50,6 +52,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        self.validate_non_negative(value, "x")
         self.__x = value
 
     """getter and setter for y"""
@@ -59,4 +62,20 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        self.validate_non_negative(value, "y")
         self.__y = value
+
+    """validation methods"""
+    def validate_positive(self, value, attribute_name):
+        """Validation method for positive integers"""
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute_name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{attribute_name} must be > 0")
+    
+    def validate_non_negative(self, value, attribute_name):
+        """Validation method for x and y"""
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute_name} must be an integer")
+        if value < 0:
+            raise ValueError(f"{attribute_name} must be >= 0")
