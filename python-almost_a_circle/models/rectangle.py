@@ -79,3 +79,7 @@ class Rectangle(Base):
             raise TypeError(f"{attribute_name} must be an integer")
         if value < 0:
             raise ValueError(f"{attribute_name} must be >= 0")
+        
+    def area(self):
+        """we will calculate the area by multiplying the height and the width"""
+        return self.height * self.width
