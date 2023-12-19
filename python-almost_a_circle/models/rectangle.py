@@ -1,4 +1,7 @@
 """In this module we will explore python classes further"""
+from typing import Any
+
+
 class Base:
     """This is a private class attribut"""
     __nb_objects = 0
@@ -88,3 +91,7 @@ class Rectangle(Base):
         """This method will display the rectangle"""
         for i in range(self.height):
             print("#" * self.width)
+
+    def __str__(self) -> str:
+        """This method overides the __str__ method and returns this unique string"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
