@@ -24,4 +24,4 @@ if __name__ == "__main__":
         user_id = user_data['id']
         print(f"{user_id}")
     else:
-        print(f"Error: {response.status_code} - {response.text}")
+        print(None)
