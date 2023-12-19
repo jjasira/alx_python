@@ -14,6 +14,7 @@ class Base:
 
 """This is out Rectangle class that will inherit from our base class"""
 class Rectangle(Base):
+    """this is the class contructor for our Rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """we call the superclass constructor"""
         super().__init__(id)
