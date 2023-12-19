@@ -13,4 +13,4 @@ if __name__ == "__main__":
     
     x_request_id = response.headers.get('X-Request-Id')
     
-    print(f"The value of X-Request-Id is: {x_request_id}")
+    print(f"{x_request_id}")
