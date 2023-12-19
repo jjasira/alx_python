@@ -99,8 +99,15 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
     
 
-    def update(self, *args):
+    def update(self, *args,**kwargs):
         """This method updates the attributes from a provided list of arguments"""
         attributes = ["id", "width", "height", "x", "y"]
-        for i, value in enumerate(args):
-            setattr(self, attributes[i], value)
+        """check if args exists and is not empty"""
+        if args:
+
+            for i, value in enumerate(args):
+                setattr(self, attributes[i], value)
+        else:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
