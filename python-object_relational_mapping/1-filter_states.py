@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     """We execute the required query"""
    
-    cursor.execute(f"SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute(f"SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC")
 
     """Fetch all the rows"""
     rows = cursor.fetchall()
