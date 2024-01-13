@@ -15,7 +15,7 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     """We execute the required query"""
-    query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cursor.execute(query, (state_name))
 
     """Fetch all the rows"""
