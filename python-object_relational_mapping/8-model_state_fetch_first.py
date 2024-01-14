@@ -25,7 +25,7 @@ if __name__ == '__main__':
         if first_state:
             print("{}: {}".format(first_state.id, first_state.name))
         else:
-            print("")
+            print("Nothing")
     except Exception as e:
         print("Error:", e)
     finally:
