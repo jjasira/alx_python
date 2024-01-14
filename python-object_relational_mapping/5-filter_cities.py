@@ -6,7 +6,7 @@ import sys
 """This prevents the code from running automatically when imported"""
 if __name__ == '__main__':
     """We assign the command line arguments to varibales"""
-    mysql_username, mysql_password, database_name, state_name = sys.argv[1:4]
+    mysql_username, mysql_password, database_name, state_name = sys.argv[1:]
 
     """We establish a connection to the database"""
     db = MySQLdb.connect(host="localhost", port=3306, user=mysql_username, passwd= mysql_password, db=database_name)
