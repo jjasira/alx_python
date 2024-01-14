@@ -32,7 +32,7 @@ if __name__ == '__main__':
         if cities:
             print(", ".join(city[0] for city in cities))
         else:
-            print("No cities found for the specified state")
+            print("")
     except MySQLdb.Error as e:
         print("MySQL Error: {}".format(e))
     
