@@ -1,4 +1,5 @@
 """We will import Flask from flask"""
+from http.client import HTTPException
 from flask import Flask, render_template
 
 """This is tha name of the flask app"""
@@ -45,8 +46,10 @@ def display_number(n):
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def display_number_template(n):
     """display the number"""
-    return render_template('5-number.html', n=n)
-
+    if isinstance(n, int):
+        return render_template('5-number.html', n=n)
+    else:
+        HTTPException(404, "File Not Found")
 
 """This will enable the app to be run by python"""
 if __name__ == "__main__":
