@@ -24,13 +24,16 @@ def display_c_text(text):
     """We will return the new text"""
     return 'C {}'.format(new_text)
 
+
+
+
 """This route will display python plus the variable"""
 @app.route('/python/<text>', strict_slashes=False)
 def display_python_text(text='is cool'):
     """We will remove the _ and replace it with a space"""
-    new_text = text.replace('_', ' ')
+    formatted_text = text.replace('_', ' ')
     """We will return the new text"""
-    return 'Python {}'.format(new_text)
+    return f'Python {formatted_text}'
 
 
 """This will enable the app to be run by python"""
