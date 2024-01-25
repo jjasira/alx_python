@@ -1,0 +1,71 @@
+"""We will import Flask from flask"""
+from http.client import HTTPException
+from flask import Flask, render_template
+
+"""This is tha name of the flask app"""
+app = Flask(__name__)
+
+"""This is the route definition"""
+@app.route("/", strict_slashes=False)
+def hello_world():
+    """This is what will be returned from our route"""
+    return "Hello HBNB!"
+
+"""This is the route definition"""
+@app.route("/hbnb", strict_slashes=False)
+def hbnb():
+    """This is what will be returned from our route"""
+    return "HBNB"
+
+"""This route will display C plus the variable"""
+@app.route('/c/<text>', strict_slashes=False)
+def display_c_text(text):
+    """We will remove the _ and replace it with a space"""
+    new_text = text.replace('_', ' ')
+    """We will return the new text"""
+    return 'C {}'.format(new_text)
+
+
+"""This route will display python plus the variable"""
+@app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def display_python_text(text):
+    
+    """We will remove the _ and replace it with a space"""
+    formatted_text = text.replace('_', ' ')
+    """We will return the new text"""
+    return f'Python {formatted_text}'
+
+"""this decorator has a verification method to make sure the variable passed is an int"""
+@app.route('/number/<int:n>', strict_slashes=False)
+def display_number(n):
+    """display the number"""
+    return f'{n} is a number'
+
+"""this decorator has a verification method to make sure the variable passed is an int"""
+@app.route('/number_template/<int:n>', strict_slashes=False)
+def display_number_template(n):
+    """display the number"""
+    if isinstance(n, int):
+        return render_template('5-number.html', n=n)
+    else:
+        HTTPException(404, "File Not Found")
+
+
+"""this decorator has a verification method to make sure the variable passed is an int"""
+@app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
+def number_odd_or_even(n):
+    """display the number"""
+    if n%2 == 0:
+        even_or_odd = "even"
+        return render_template('6-number_odd_or_even.html', n=n, even_or_odd=even_or_odd)
+    else:
+        even_or_odd = "odd"
+        return render_template('6-number_odd_or_even.html', n=n, even_or_odd=even_or_odd)
+
+    
+
+"""This will enable the app to be run by python"""
+if __name__ == "__main__":
+    """set the host and port"""
+    app.run(host='0.0.0.0', port=5000)
