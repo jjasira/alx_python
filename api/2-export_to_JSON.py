@@ -1,7 +1,9 @@
+"""Import the needed modules in alphabetical order"""
 import json
 import requests
 import sys
 
+"""This function will take an employee's id as an argument and return a json file with the required details"""
 def get_employee_info(employee_id):
     """Fetch the employee details from the given url by appending the employee_id and convert the data to json"""
     employee_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
