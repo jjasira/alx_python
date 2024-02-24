@@ -28,7 +28,7 @@ def get_employee_info(employee_id):
             writer.writerow({
                 'USER_ID': employee_id,
                 'USERNAME': employee_data['username'],
-                'TASK_COMPLETED_STATUS': task['completed']
+                'TASK_COMPLETED_STATUS': task['completed'],
                 'TASK_TITLE': task['title']
             })
 
