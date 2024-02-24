@@ -16,7 +16,7 @@ def get_employee_info(employee_id):
 
     """create csv file for the empoyee"""
     file_name = f"{employee_id}.csv"
-    with open(file_name, mode="w", newline='') as csv_file:
+    with open(file_name, mode="w") as csv_file:
         fieldnames = ['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE' ]
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
