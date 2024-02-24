@@ -1,6 +1,7 @@
+import csv
 import requests
 import sys
-import csv
+
 
 def get_employee_info(employee_id):
     """Fetch the employee details from the given url by appending the employee_id and convert the data to json"""
