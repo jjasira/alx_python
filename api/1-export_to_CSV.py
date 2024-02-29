@@ -45,9 +45,9 @@
 #     """Call the function with the provided id"""
 #     get_employee_info(employee_id)
 
-
-import requests
 import csv
+import requests
+
 
 def get_employee_info(employee_id):
     """Fetching employee details"""
